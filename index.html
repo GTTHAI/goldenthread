@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Thread - นวัตกรรมเส้นด้ายแห่งอนาคต</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .bg-custom-dark {
+            background-color: #4A5568;
+        }
+        .bg-custom-dark-60 {
+            background-color: rgba(74, 85, 104, 0.6);
+        }
+        .bg-custom-dark-70 {
+            background-color: rgba(74, 85, 104, 0.3);
+        }
+        .bg-custom-dark-80 {
+            background-color: rgba(74, 85, 104, 0.8);
+        }
+        .bg-custom-dark-90 {
+            background-color: rgba(74, 85, 104, 0.9);
+        }
+        .hero-bg {
+            background-image: url('images/top.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-gray-300">
+
+    <!-- Header -->
+    <header class="bg-custom-dark-60 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-amber-400">GOLDEN THREAD</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#products" class="hover:text-amber-400 transition-colors">ผลิตภัณฑ์</a>
+                <a href="#technology" class="hover:text-amber-400 transition-colors">เทคโนโลยี</a>
+                <a href="#solutions" class="hover:text-amber-400 transition-colors">โซลูชัน</a>
+                <a href="#about" class="hover:text-amber-400 transition-colors">เกี่ยวกับเรา</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">ติดต่อ</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-amber-500 text-slate-900 font-bold py-2 px-6 rounded-full hover:bg-amber-400 transition-colors">
+                ปรึกษาฟรี
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#products" class="block hover:text-amber-400 transition-colors">ผลิตภัณฑ์</a>
+            <a href="#technology" class="block hover:text-amber-400 transition-colors">เทคโนโลยี</a>
+            <a href="#solutions" class="block hover:text-amber-400 transition-colors">โซลูชัน</a>
+            <a href="#about" class="block hover:text-amber-400 transition-colors">เกี่ยวกับเรา</a>
+            <a href="#contact" class="block hover:text-amber-400 transition-colors">ติดต่อ</a>
+            <a href="#contact" class="block bg-amber-500 text-slate-900 font-bold text-center mt-2 py-2 px-6 rounded-full hover:bg-amber-400 transition-colors">
+                ปรึกษาฟรี
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+                นวัตกรรม<br><span class="text-amber-400">เส้นด้าย</span>คุณภาพ
+            </h1>
+            <p class="mt-6 text-xl md:text-2xl max-w-3xl mx-auto text-white font-semibold">
+                ด้วยเทคโนโลยีการย้อมเส้นด้ายล่าสุด ผสานกับความเชี่ยวชาญกว่า 50 ปี สร้างเส้นด้ายคุณภาพสำหรับทุกอุตสาหกรรม
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#products" class="bg-amber-500 text-slate-900 font-bold py-3 px-8 rounded-full hover:bg-amber-400 transition-colors w-full sm:w-auto">
+                    ดูผลิตภัณฑ์
+                </a>
+                <a href="#contact" class="border-2 border-amber-400 text-amber-400 font-bold py-3 px-8 rounded-full hover:bg-amber-400 hover:text-slate-900 transition-colors w-full sm:w-auto">
+                    ปรึกษาฟรี
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="bg-custom-dark-70 py-6 sm:py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 text-center max-w-sm sm:max-w-4xl mx-auto">
+                <div class="flex flex-col items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-2 sm:p-3 shadow-lg">
+                    <span class="text-2xl sm:text-4xl font-bold text-amber-400">50+</span>
+                    <span class="mt-1 sm:mt-2 text-xs sm:text-base text-gray-400">ปีแห่งประสบการณ์</span>
+                </div>
+                <div class="flex flex-col items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-2 sm:p-3 shadow-lg">
+                    <span class="text-2xl sm:text-4xl font-bold text-amber-400">1000+</span>
+                    <span class="mt-1 sm:mt-2 text-xs sm:text-base text-gray-400">เฉดสีพร้อมผลิต</span>
+                </div>
+                <div class="flex flex-col items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-2 sm:p-3 shadow-lg">
+                    <div class="text-2xl sm:text-4xl font-bold text-amber-400 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-10 sm:w-10 mr-1 sm:mr-2" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        ISO
+                    </div>
+                    <span class="mt-1 sm:mt-2 text-xs sm:text-base text-gray-400">Certified Quality</span>
+                </div>
+                <div class="flex flex-col items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-2 sm:p-3 shadow-lg">
+                    <span class="text-2xl sm:text-4xl font-bold text-amber-400">100%</span>
+                    <span class="mt-1 sm:mt-2 text-xs sm:text-base text-gray-400">Service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-100 text-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">ผลิตภัณฑ์เส้นด้าย</h2>
+                <p class="mt-4 text-lg text-gray-600">เส้นด้ายคุณภาพสูงสำหรับทุกความต้องการของคุณ</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-sm mx-auto sm:max-w-none">
+                <!-- Product Card 1 -->
+                <div class="bg-amber-400/10 border-4 border-amber-400 rounded-lg shadow-lg overflow-hidden group flex flex-col hover:shadow-xl transition-all duration-300">
+                    <img src="images/Spun Polyester.jpg" alt="Spun Polyester" class="w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-300" style="object-position: center;">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">Spun Polyester</h3>
+                        <p class="text-gray-600 mb-4">เส้นด้ายปั่นพอลีเอสเตอร์ความแข็งแรงสูง เหมาะสำหรับงานเย็บทั่วไปและงานอุตสาหกรรม</p>
+                        <div class="mt-auto">
+                            <h4 class="font-semibold mb-2 text-gray-700">ตัวอย่างการใช้งาน:</h4>
+                            <ul class="space-y-1 text-gray-600 list-disc list-inside mb-4">
+                                <li>เสื้อผ้าแฟชั่นและเสื้อยืด</li>
+                                <li>ชุดทำงานและเครื่องแบบ</li>
+                                <li>ผ้าปูที่นอนและของใช้ในบ้าน</li>
+                                <li>ด้ายเย็บสำหรับงานทั่วไป</li>
+                                <li>งานปักคอมพิวเตอร์</li>
+                                <li>ผ้าบุเฟอร์นิเจอร์</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-amber-400/10 border-4 border-amber-400 rounded-lg shadow-lg overflow-hidden group flex flex-col hover:shadow-xl transition-all duration-300">
+                    <img src="images/core spun.jpg" alt="Core Spun" class="w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-300" style="object-position: center;">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">Core Spun</h3>
+                        <p class="text-gray-600 mb-4">ที่สุดของความยืดหยุ่นและความนุ่มนวล สำหรับงานเฉพาะทางที่ต้องการคุณสมบัติพิเศษ</p>
+                        <div class="mt-auto">
+                            <h4 class="font-semibold mb-2 text-gray-700">ตัวอย่างการใช้งาน:</h4>
+                            <ul class="space-y-1 text-gray-600 list-disc list-inside mb-4">
+                                <li>กางเกงยีนส์ยืด (Stretch Denim)</li>
+                                <li>ชุดชั้นในและชุดว่ายน้ำ</li>
+                                <li>เสื้อผ้าที่ต้องการความกระชับ</li>
+                                <li>ถุงเท้าและเลกกิ้ง</li>
+                                <li>ชุดออกกำลังกาย</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-amber-400/10 border-4 border-amber-400 rounded-lg shadow-lg overflow-hidden group flex flex-col hover:shadow-xl transition-all duration-300">
+                    <img src="images/Textured Filament.jpg" alt="Textured Filament" class="w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-300" style="object-position: center;">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">Textured Filament</h3>
+                        <p class="text-gray-600 mb-4">เส้นใยฟิลาเมนต์เท็กซ์เจอร์ ให้ความคงทนระดับพรีเมียมและสัมผัสที่เป็นเอกลักษณ์</p>
+                        <div class="mt-auto">
+                            <h4 class="font-semibold mb-2 text-gray-700">ตัวอย่างการใช้งาน:</h4>
+                            <ul class="space-y-1 text-gray-600 list-disc list-inside mb-4">
+                                <li>ชุดกีฬาและ Activewear</li>
+                                <li>เบาะรถยนต์และเฟอร์นิเจอร์</li>
+                                <li>ผ้าม่านและพรม</li>
+                                <li>กระเป๋าเดินทางและเป้สะพายหลัง</li>
+                                <li>เชือกและสายรัดอุตสาหกรรม</li>
+                                <li>อุปกรณ์แคมป์ปิ้งและเต็นท์</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 bg-custom-dark-80">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">เทคโนโลยีที่ทำให้เราแตกต่าง</h2>
+                <p class="mt-4 text-lg text-gray-400">เราลงทุนในเทคโนโลยีล่าสุดเพื่อให้ได้เส้นด้ายคุณภาพสูงสุด</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="bg-custom-dark-70 p-6 rounded-full mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Smart Dye Lab</h3>
+                    <p class="text-gray-400">ห้องแลปสีควบคุมอุณหภูมิพร้อม Spectrophotometer ให้ทุกเฉดสีมีความแม่นยำสูงสุด</p>
+                </div>
+                 <div class="flex flex-col items-center">
+                    <div class="bg-custom-dark-70 p-6 rounded-full mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V7a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Realtime Production</h3>
+                    <p class="text-gray-400">ติดตามสถานะการผลิตแบบเรียลไทม์ ผ่าน Dashboard ออนไลน์ เพื่อการวางแผนที่แม่นยำ</p>
+                </div>
+                 <div class="flex flex-col items-center">
+                    <div class="bg-custom-dark-70 p-6 rounded-full mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Quality Gate</h3>
+                    <p class="text-gray-400">ตรวจสอบเส้นด้ายทุกหลอดด้วยเครื่องมือที่ทันสมัย มั่นใจได้ในคุณภาพที่สม่ำเสมอ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-gray-50 text-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">โซลูชันสำหรับทุกอุตสาหกรรม</h2>
+                <p class="mt-4 text-lg text-gray-600">เราเข้าใจความต้องการเฉพาะของแต่ละธุรกิจ และพร้อมส่งมอบเส้นด้ายที่ตอบโจทย์</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-5xl">🎨</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">แฟชั่นและการออกแบบ</h3>
+                    <p class="text-gray-600 mb-4">สีสันที่แม่นยำ ความนุ่ม และการยืดหยุ่นที่เหมาะกับงานแฟชั่นระดับไฮเอนด์</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> เฉดสีคงทน ไม่ซีด</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ผิวสัมผัสนุ่มลื่น</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ยืดหยุ่นตามการออกแบบ</li>
+                    </ul>
+                </div>
+                <!-- Solution 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-5xl">🏭</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">อุตสาหกรรมหนัก</h3>
+                    <p class="text-gray-600 mb-4">ความแข็งแกร่งและทนทานสำหรับงานอุตสาหกรรมที่ต้องการความเชื่อมั่นสูงสุด</p>
+                     <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ทนต่อแรงดึงสูง</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ทนความร้อนและสารเคมี</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ใช้งานได้ยาวนาน</li>
+                    </ul>
+                </div>
+                <!-- Solution 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-5xl">⚡</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">กีฬาและเครื่องกีฬา</h3>
+                    <p class="text-gray-600 mb-4">ความยืดหยุ่นและระบายอากาศที่เหมาะกับเสื้อผ้ากีฬาสมรรถนะสูง</p>
+                     <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ระบายความชื้นดีเยี่ยม</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ยืดหยุ่นตามการเคลื่อนไหว</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> แห้งเร็ว ไม่อับชื้น</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-custom-dark-80">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Golden Thread" class="rounded-lg shadow-2xl">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold text-white">เกี่ยวกับโกลเด้นเธร็ด</h2>
+                <p class="text-2xl text-amber-400 mt-2">50 ปีแห่งความเชี่ยวชาญที่ถักทออนาคต</p>
+                <p class="mt-6 text-gray-400">
+                    เรามุ่งมั่นสร้างระบบการผลิตที่ตอบโจทย์ทั้งคุณภาพและเวลาส่งมอบ ด้วยการลงทุนในเทคโนโลยีการปั่นด้ายและการควบคุมสีสันแบบดิจิทัล ลูกค้าจึงได้รับเส้นด้ายที่มีความสม่ำเสมอสูงและพร้อมใช้งานกับไลน์ผลิตจริงได้ทันที
+                </p>
+                 <div class="mt-8 space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-amber-500/10 text-amber-400 rounded-full p-3">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10m-2-2s2 2 3 3m2-2s2-2 3-3" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-white">บริการออกแบบเฉดสีเฉพาะแบรนด์</h4>
+                            <p class="text-gray-400">สร้างเอกลักษณ์ให้แบรนด์ของคุณด้วยสีพิเศษที่ไม่เหมือนใคร</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-amber-500/10 text-amber-400 rounded-full p-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-white">ควบคุมการส่งมอบแบบ Just-in-Time</h4>
+                            <p class="text-gray-400">ลดต้นทุนสต็อกสินค้าและเพิ่มประสิทธิภาพให้สายการผลิตของคุณ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100 text-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">ติดต่อเรา</h2>
+                <p class="mt-4 text-lg text-gray-600">เราพร้อมให้คำปรึกษาเรื่องเส้นด้ายแบบมืออาชีพ</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">สำนักงานใหญ่ (ราชบุรี)</h3>
+                    <p class="text-gray-600 mb-4">109 หมู่ 3 ตำบลดอนกระเบื้อง<br>อำเภอบ้านโป่ง จังหวัดราชบุรี 70110</p>
+                    <p class="text-gray-600"><strong>โทร:</strong> <a href="tel:028017771" class="text-amber-600 hover:underline">02-801-7771 (อัตโนมัติ)</a></p>
+                    <p class="text-gray-600"><strong>อีเมล:</strong> <a href="mailto:info@gtthai.com" class="text-amber-600 hover:underline">info@gtthai.com</a></p>
+                </div>
+                 <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">สำนักงานกรุงเทพฯ</h3>
+                    <p class="text-gray-600 mb-4">1880 ซ.เพชรเกษม 63 แขวงหลักสอง<br>เขตบางแค กรุงเทพฯ 10160</p>
+                     <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                        <a href="tel:028017771" class="bg-amber-500 text-slate-900 font-bold py-3 px-6 rounded-full hover:bg-amber-400 transition-colors text-center">โทรหาเรา</a>
+                        <a href="mailto:info@gtthai.com" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-full hover:bg-gray-600 transition-colors text-center">ส่งอีเมล</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-custom-dark-90 text-gray-400">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Desktop Layout -->
+            <div class="hidden md:grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-amber-400 mb-4">GOLDEN THREAD</h3>
+                    <p>ผู้นำด้านนวัตกรรมเส้นด้าย<br>คุณภาพ</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">เมนู</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="hover:text-amber-400">ผลิตภัณฑ์</a></li>
+                        <li><a href="#technology" class="hover:text-amber-400">เทคโนโลยี</a></li>
+                        <li><a href="#solutions" class="hover:text-amber-400">โซลูชัน</a></li>
+                        <li><a href="#about" class="hover:text-amber-400">เกี่ยวกับเรา</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">ช่วยเหลือ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="hover:text-amber-400">ติดต่อเรา</a></li>
+                        <li><a href="#" class="hover:text-amber-400">คำถามที่พบบ่อย</a></li>
+                        <li><a href="#" class="hover:text-amber-400">นโyaบายความเป็นส่วนตัว</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">ติดตามเรา</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-amber-400">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-amber-400">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="md:hidden">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-amber-400 mb-2">GOLDEN THREAD</h3>
+                    <p class="text-sm">ผู้นำด้านนวัตกรรมเส้นด้าย คุณภาพ</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-center mb-6">
+                    <a href="#products" class="hover:text-amber-400 text-sm">ผลิตภัณฑ์</a>
+                    <a href="#technology" class="hover:text-amber-400 text-sm">เทคโนโลยี</a>
+                    <a href="#solutions" class="hover:text-amber-400 text-sm">โซลูชัน</a>
+                    <a href="#about" class="hover:text-amber-400 text-sm">เกี่ยวกับเรา</a>
+                    <a href="#contact" class="hover:text-amber-400 text-sm">ติดต่อเรา</a>
+                    <a href="#" class="hover:text-amber-400 text-sm">คำถามที่พบบ่อย</a>
+                    <a href="#" class="hover:text-amber-400 text-sm">นโยบายความเป็นส่วนตัว</a>
+                </div>
+
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="hover:text-amber-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 Golden Thread Co., Ltd. สงวนลิขสิทธิ์</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>
+
+
+
